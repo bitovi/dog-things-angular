@@ -1,0 +1,18 @@
+<div class="product-list">
+  <ul class="list-of-products">
+    <li *ngFor="let product of products | async">
+      <aside>
+        <img src="{{ product.image }}" class="product-image" alt="The product" />
+      </aside>
+
+      <div class="product-info">
+        <header>
+          <h1>{{ product.name }}</h1>
+        </header>
+        <div class="product-desc">
+          {{ product.desc }}
+        </div>
+      </div>
+    </li>
+  </ul>
+</div>

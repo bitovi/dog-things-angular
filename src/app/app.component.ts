@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import './product-list/product-list.component';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,13 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'dog-things-angular';
+  page = 'products';
+
+  isCart() {
+    return this.page === 'cart';
+  }
+
+  isProducts() {
+    return this.page === 'products';
+  }
 }
