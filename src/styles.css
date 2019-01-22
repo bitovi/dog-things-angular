@@ -1,1 +1,34 @@
 /* You can add global styles to this file, and also import other style files */
+
+body {
+  font-family: "Helvetica Neue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: 300;
+}
+header {
+  display: flex;
+  margin-right: 2em;
+}
+header .header-left,
+header .header-right {
+  flex: 1;
+}
+header .header-right {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.product-page {
+  display: flex;
+  margin: 0 4rem;
+}
+.product-page .sideoptions {
+  flex: 1;
+}
+.product-page .sideoptions ul {
+  padding: 0;
+  list-style-type: none;
+  line-height: 1.5rem;
+}
+.product-page product-list {
+  flex: 5;
+}
