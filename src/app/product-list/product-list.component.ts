@@ -29,20 +29,12 @@ export class ProductListComponent implements OnInit {
           observer.next(allProducts);
         }
       });
-      
+
       return {
         unsubscribe() {
           cont = false;
         }
       }
-    })
-
-    /*this.products = Observable.create(observer => {
-      api.getProducts(product => {
-        console.log('adding product');
-        observer.next(product);
-      });
-    });*/
+    });
   }
-
 }

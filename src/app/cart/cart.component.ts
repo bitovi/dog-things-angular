@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import * as api from '../../api.js';
 
 @Component({
   selector: 'app-cart',
@@ -6,11 +7,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./cart.component.css']
 })
 export class CartComponent implements OnInit {
-  count = 0;
+  @Input() count: number
 
   constructor() { }
 
   ngOnInit() {
+    this.count = 0;
+    this.loadCart();
+  }
+
+  async loadCart() {
+    let cart = await api.getCart();
+    this.count = cart.count;
   }
 
 }
