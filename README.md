@@ -1,5 +1,7 @@
 # DogThingsAngular
 
+<img width="1321" alt="The Dog Things example app for Angular" src="https://user-images.githubusercontent.com/361671/51995878-a50d3c80-2481-11e9-97d1-f733e23222e9.png">
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.2.2.
 
 ## Development server
