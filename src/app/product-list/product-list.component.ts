@@ -23,10 +23,17 @@ export class ProductListComponent implements OnInit {
       let allProducts = [];
 
       api.getProducts(product => {
+        if(!allProducts.length && window.parent) {
+          window.parent.postMessage("first-item", "*");
+        }
 
         if(cont) {
           allProducts.push(product);
           observer.next(allProducts);
+        }
+      }).then(() => {
+        if(window.parent) {
+          window.parent.postMessage("last-item", "*");
         }
       });
 
